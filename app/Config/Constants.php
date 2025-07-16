@@ -77,3 +77,89 @@ defined('EXIT_USER_INPUT')     || define('EXIT_USER_INPUT', 7);     // invalid u
 defined('EXIT_DATABASE')       || define('EXIT_DATABASE', 8);       // database error
 defined('EXIT__AUTO_MIN')      || define('EXIT__AUTO_MIN', 9);      // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      || define('EXIT__AUTO_MAX', 125);    // highest automatically-assigned error code
+
+/*
+|--------------------------------------------------------------------------
+| VEREINSAPP Projekt-übergreifende Konstanten
+|--------------------------------------------------------------------------*/
+
+defined('LISTEN') OR define( 'LISTEN', array() );
+
+defined('ELEMENTE') OR define( 'ELEMENTE', array() );
+
+defined('JANEIN') OR define( 'JANEIN', array(
+	0 => array( 'beschriftung' => 'Nein', 'wert' => FALSE ),
+	1 => array( 'beschriftung' => 'Ja', 'wert' => TRUE ),
+) );
+
+defined('WOCHENTAGE_KURZ') OR define( 'WOCHENTAGE_KURZ', array(
+	1 => array( 'beschriftung' => 'Mo.' ),
+	2 => array( 'beschriftung' => 'Di.' ),
+	3 => array( 'beschriftung' => 'Mi.' ),
+	4 => array( 'beschriftung' => 'Do.' ),
+	5 => array( 'beschriftung' => 'Fr.' ),
+	6 => array( 'beschriftung' => 'Sa.' ),
+	7 => array( 'beschriftung' => 'So.' ),
+) );
+
+defined('WOCHENTAGE_LANG') OR define( 'WOCHENTAGE_LANG', array(
+	1 => array( 'beschriftung' => 'Montag' ),
+	2 => array( 'beschriftung' => 'Dienstag' ),
+	3 => array( 'beschriftung' => 'Mittwoch' ),
+	4 => array( 'beschriftung' => 'Donnnerstag' ),
+	5 => array( 'beschriftung' => 'Freitag' ),
+	6 => array( 'beschriftung' => 'Samstag' ),
+	7 => array( 'beschriftung' => 'Sonntag' ),
+) );
+
+defined('SYMBOLE') OR define( 'SYMBOLE', array(
+    'einstellungen' => array( 'bootstrap' => 'gear' ),
+    'logout' => array( 'bootstrap' => 'door-open' ),
+
+    'werkzeuge' => array( 'bootstrap' => 'tools' ),
+    'erstellen' => array( 'bootstrap' => 'plus-lg' ),
+    'aendern' => array( 'bootstrap' => 'pencil' ),
+    'duplizieren' => array( 'bootstrap' => 'files' ),
+    'loeschen' => array( 'bootstrap' => 'trash' ),
+    'auswaehlen' => array( 'bootstrap' => 'box-arrow-in-down-left' ),
+    'offen_erledigt_markieren' => array ( 'bootstrap' => 'check2-circle' ),
+    'strafe_zuweisen' => array ( 'bootstrap' => 'journal-plus' ),
+
+    'sortable' => array( 'bootstrap' => 'arrow-down-up' ),
+    'collapse_oeffnen' => array( 'bootstrap' => 'caret-right' ),
+    'collapse_schliessen' => array( 'bootstrap' => 'caret-down' ),
+    'collapse' => array( 'bootstrap' => 'caret-down' ),
+    'filtern' => array( 'bootstrap' => 'funnel' ),
+    'sortieren' => array( 'bootstrap' => 'sort-down' ),
+    'gruppieren' => array( 'bootstrap' => 'hdd-stack' ),
+    'inklusiv_exklusiv' => array( 'bootstrap' => 'transparency' ),
+    'asc' => array( 'bootstrap' => 'sort-alpha-down' ),
+    'desc' => array( 'bootstrap' => 'sort-alpha-up' ),
+    'alle_checks_anwaehlen' => array( 'bootstrap' => 'toggle-on' ),
+    'alle_checks_abwaehlen' => array( 'bootstrap' => 'toggle-off' ),
+    'pfeil_links' => array( 'bootstrap' => 'arrow-left' ),
+    'pfeil_rechts' => array( 'bootstrap' => 'arrow-right' ),
+    'spacer' => array ( 'bootstrap' => 'dot' ),
+
+    'statistiken' => array( 'bootstrap' => 'graph-up-arrow' ),
+    'einmal_link_anzeigen' => array( 'bootstrap' => 'link' ),
+    'einmal_link_email' => array( 'bootstrap' => 'envelope' ),
+
+    'bemerkung' => array( 'bootstrap' => 'chat-dots' ),
+
+    'zahlenraum' => array( 'bootstrap' => '123' ),
+    'zeitraum' => array( 'bootstrap' => 'calendar-range' ),
+    'ort' => array( 'bootstrap' => 'geo-alt-fill' ),
+    // 'ende' => array( 'bootstrap' => 'heart-arrow' ),
+
+    'sichtbar' => array( 'bootstrap' => 'eye' ),
+    'unsichtbar' => array( 'bootstrap' => 'eye-slash' ),
+
+    'offen' => array( 'bootstrap' => 'circle' ),
+    'erledigt' => array( 'bootstrap' => 'check-circle' ),
+) );
+
+// enum ZUSTAND
+// {
+//     case FERTIG;
+// }

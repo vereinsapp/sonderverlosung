@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-class Home extends BaseController
+class Bildschirm extends BaseController
 {
     public function index(): string
     {

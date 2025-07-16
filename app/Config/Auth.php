@@ -157,7 +157,7 @@ class Auth extends ShieldAuth
      * --------------------------------------------------------------------
      * Determines whether users can register for the site.
      */
-    public bool $allowRegistration = true;
+    public bool $allowRegistration = false;
 
     /**
      * --------------------------------------------------------------------
@@ -210,7 +210,7 @@ class Auth extends ShieldAuth
         'field'              => 'user',
         'allowRemembering'   => true,
         'rememberCookieName' => 'remember',
-        'rememberLength'     => 30 * DAY,
+        'rememberLength'     => 365 * DAY,
     ];
 
     /**
@@ -271,9 +271,9 @@ class Auth extends ShieldAuth
      * @var list<class-string<ValidatorInterface>>
      */
     public array $passwordValidators = [
-        CompositionValidator::class,
-        NothingPersonalValidator::class,
-        DictionaryValidator::class,
+        // CompositionValidator::class,
+        // NothingPersonalValidator::class,
+        // DictionaryValidator::class,
         // PwnedValidator::class,
     ];
 
@@ -412,13 +412,13 @@ class Auth extends ShieldAuth
      * @var array<string, string>
      */
     public array $tables = [
-        'users'             => 'users',
-        'identities'        => 'auth_identities',
-        'logins'            => 'auth_logins',
-        'token_logins'      => 'auth_token_logins',
-        'remember_tokens'   => 'auth_remember_tokens',
-        'groups_users'      => 'auth_groups_users',
-        'permissions_users' => 'auth_permissions_users',
+        'users'             => 'mitglieder',
+        'identities'        => 'mitglieder_zugaenge',
+        'logins'            => 'mitglieder_login_versuche',
+        'token_logins'      => 'mitglieder_login_versuche_token',
+        'remember_tokens'   => 'mitglieder_login_eingeloggt_bleiben',
+        'groups_users'      => 'mitglieder_rollen',
+        'permissions_users' => 'mitglieder_vergebene_rechte',
     ];
 
     /**
@@ -433,7 +433,7 @@ class Auth extends ShieldAuth
      *
      * @var class-string<UserModel>
      */
-    public string $userProvider = UserModel::class;
+    public string $userProvider = 'App\Models\Fernbedienungen\Fernbedienung_Model';
 
     /**
      * Returns the URL that a user should be redirected
