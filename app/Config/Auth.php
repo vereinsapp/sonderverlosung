@@ -412,13 +412,13 @@ class Auth extends ShieldAuth
      * @var array<string, string>
      */
     public array $tables = [
-        'users'             => 'mitglieder',
-        'identities'        => 'mitglieder_zugaenge',
-        'logins'            => 'mitglieder_login_versuche',
-        'token_logins'      => 'mitglieder_login_versuche_token',
-        'remember_tokens'   => 'mitglieder_login_eingeloggt_bleiben',
-        'groups_users'      => 'mitglieder_rollen',
-        'permissions_users' => 'mitglieder_vergebene_rechte',
+        'users'             => 'fernbedienungen',
+        'identities'        => 'fernbedienungen_zugaenge',
+        'logins'            => 'fernbedienungen_login_versuche',
+        'token_logins'      => 'fernbedienungen_login_versuche_token',
+        'remember_tokens'   => 'fernbedienungen_login_eingeloggt_bleiben',
+        'groups_users'      => 'fernbedienungen_rollen',
+        'permissions_users' => 'fernbedienungen_vergebene_rechte',
     ];
 
     /**

@@ -82,7 +82,7 @@ abstract class BaseController extends Controller
 
         defined('ICH') OR define( 'ICH', $this->session->user );
 
-        defined('VERSION') OR define( 'VERSION', preg_replace('/\s+/', '', file_get_contents( ROOTPATH.'/README.md', FALSE, NULL, 13 ) ) );
+        defined('VERSION') OR define( 'VERSION', preg_replace('/\s+/', '', file_get_contents( ROOTPATH.'/README.md', FALSE, NULL, 17 ) ) );
 
         defined('HEAD_STYLESHEET') OR define( 'HEAD_STYLESHEET', array( 
           array( 'href' => 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css', 'integrity' => 'sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH', 'crossorigin' => 'anonymous', ),
@@ -122,65 +122,6 @@ abstract class BaseController extends Controller
 
         $head_script[] = array( 'src' => base_url('js/sonderverlosung/Sonderverlosung_Init.js?v='.VERSION), );
 
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/Liste_Init.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/Liste_Aktualisieren.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/Liste_UeberschriftAktualisieren.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/Liste_WerkzeugAktualisieren.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/Liste_ListenstatistikAktualisieren.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/Liste_FormularInitialisieren.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/Liste_FormularEigenschaftenWerteZurueck.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/Liste_FormularEigenschaftenWerteZurueck.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/Liste_ElementLoeschen.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/Liste_ElementAktualisieren.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/Liste_WertFormatiertZurueck.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/Liste_ElementZusatzsymbolAktualisieren.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/Liste_ElementZusatzinfoAktualisieren.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/Liste_ElementNavigationAktualisieren.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/Liste_ElementBeschriftungZurueck.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/Liste_ElementAuswahlEinfordern.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/Liste_ElementCheckAendern.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/Liste_ElementCheckAktualisieren.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/Liste_ElementIdZurueck.js?v='.VERSION), );
-
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/filtern/Liste_FilternInit.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/filtern/Liste_FilternModalOeffnen.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/filtern/Liste_FilternAendern.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/filtern/Liste_FilternWertInExklusivVerschieben.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/filtern/Liste_FilternWertLoeschen.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/filtern/Liste_FilternEigenschaftZuruecksetzen.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/filtern/Liste_FilternFormularInitialisieren.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/filtern/Liste_FilternFormular$EigenschaftAktualisieren.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/filtern/Liste_FilternVorgegebenAuswaehlen.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/filtern/Liste_FilternLocalStorageSpeichern.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/filtern/Liste_FilternMitPrioKombiniertZurueck.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/filtern/Liste_TabelleGefiltertAlsArrayZurueck.js?v='.VERSION), );
-
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/sortieren/Liste_SortierenInit.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/sortieren/Liste_SortierenModalOeffnen.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/sortieren/Liste_SortierenAendern.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/sortieren/Liste_SortierenEigenschaftZuruecksetzen.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/sortieren/Liste_SortierenFormularInitialisieren.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/sortieren/Liste_SortierenLocalStorageSpeichern.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/sortieren/Liste_SortierenMitPrioKombiniertZurueck.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/sortieren/Liste_ArraySortiertZurueck.js?v='.VERSION), );
-
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/gruppieren/Liste_GruppierenInit.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/gruppieren/Liste_GruppierenModalOeffnen.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/gruppieren/Liste_GruppierenAendern.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/gruppieren/Liste_GruppierenEigenschaftZuruecksetzen.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/gruppieren/Liste_GruppierenFormularInitialisieren.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/gruppieren/Liste_GruppierenLocalStorageSpeichern.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/gruppieren/Liste_ArrayGruppiertZurueck.js?v='.VERSION), );
-
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/auswertungen/Liste_AuswertungenInit.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/auswertungen/Liste_AuswertungenAktualisieren.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/auswertungen/Liste_AuswertungAktualisieren.js?v='.VERSION), );
-
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/verzeichnis/Liste_VerzeichnisInit.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/verzeichnis/Liste_VerzeichnisAktualisieren.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/verzeichnis/Liste_DateiAktualisieren.js?v='.VERSION), );
-        $head_script[] = array( 'src' => base_url('js/sonderverlosung/liste/verzeichnis/Liste_VerzeichnisAnzahlZurueck.js?v='.VERSION), );
-
         $head_script[] = array( 'src' => base_url('js/sonderverlosung/schnittstelle/ajax/Schnittstelle_AjaxInit.js?v='.VERSION), );
         $head_script[] = array( 'src' => base_url('js/sonderverlosung/schnittstelle/ajax/Schnittstelle_AjaxInDieSchlange.js?v='.VERSION), );
 
@@ -214,14 +155,13 @@ abstract class BaseController extends Controller
         $head_script[] = array( 'src' => base_url('js/sonderverlosung/schnittstelle/log/Schnittstelle_LogInDieKonsole.js?v='.VERSION), );
 
         if( auth()->loggedIn() ) {
-            $head_script[] = array( 'src' => base_url('js/sonderverlosung/mitglieder/Mitglieder_Init.js?v='.VERSION), );
-            $head_script[] = array( 'src' => base_url('js/sonderverlosung/mitglieder/Mitglieder_MitgliedErstellen.js?v='.VERSION), );
-            $head_script[] = array( 'src' => base_url('js/sonderverlosung/mitglieder/Mitglieder_MitgliedAendern.js?v='.VERSION), );
-            $head_script[] = array( 'src' => base_url('js/sonderverlosung/mitglieder/Mitglieder_PasswortAendern.js?v='.VERSION), );
-            $head_script[] = array( 'src' => base_url('js/sonderverlosung/mitglieder/Mitglieder_PasswortFestlegen.js?v='.VERSION), );
-            $head_script[] = array( 'src' => base_url('js/sonderverlosung/mitglieder/Mitglieder_EinmalLinkErstellen.js?v='.VERSION), );
-            $head_script[] = array( 'src' => base_url('js/sonderverlosung/mitglieder/Mitglieder_MitgliedBesitztRechtZurueck.js?v='.VERSION), );
-            $head_script[] = array( 'src' => base_url('js/sonderverlosung/mitglieder/Mitglieder_MitgliederAufgabenErledigtAnzeigen.js?v='.VERSION), );
+            $head_script[] = array( 'src' => base_url('js/sonderverlosung/fernbedienungen/Fernbedienungen_Init.js?v='.VERSION), );
+            $head_script[] = array( 'src' => base_url('js/sonderverlosung/fernbedienungen/Fernbedienungen_FernbedienungErstellen.js?v='.VERSION), );
+            $head_script[] = array( 'src' => base_url('js/sonderverlosung/fernbedienungen/Fernbedienungen_FernbedienungAendern.js?v='.VERSION), );
+            $head_script[] = array( 'src' => base_url('js/sonderverlosung/fernbedienungen/Fernbedienungen_PasswortAendern.js?v='.VERSION), );
+            $head_script[] = array( 'src' => base_url('js/sonderverlosung/fernbedienungen/Fernbedienungen_PasswortFestlegen.js?v='.VERSION), );
+            $head_script[] = array( 'src' => base_url('js/sonderverlosung/fernbedienungen/Fernbedienungen_EinmalLinkErstellen.js?v='.VERSION), );
+            $head_script[] = array( 'src' => base_url('js/sonderverlosung/fernbedienungen/Fernbedienungen_FernbedienungBesitztRechtZurueck.js?v='.VERSION), );
         }
         defined('HEAD_SCRIPT') OR define( 'HEAD_SCRIPT', $head_script );
 
