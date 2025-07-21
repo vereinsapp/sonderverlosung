@@ -80,7 +80,7 @@ defined('EXIT__AUTO_MAX')      || define('EXIT__AUTO_MAX', 125);    // highest a
 
 /*
 |--------------------------------------------------------------------------
-| VEREINSAPP Projekt-übergreifende Konstanten
+| SONDERVERLOSUNG Projekt-übergreifende Konstanten
 |--------------------------------------------------------------------------*/
 
 defined('LISTEN') OR define( 'LISTEN', array() );
